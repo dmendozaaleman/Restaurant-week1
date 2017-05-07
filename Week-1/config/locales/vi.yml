@@ -1,0 +1,11 @@
+# https://raw.githubusercontent.com/svenfuchs/rails-i18n/master/rails/locale/vi.yml
+# http://stackoverflow.com/questions/7237592/number-to-currency-locale-converting
+vi:
+   number:
+     currency:
+        format:
+          unit: PESOS
+          delimiter: ','
+          separator: '.'
+          precision: 2
+          format: '%n %u'

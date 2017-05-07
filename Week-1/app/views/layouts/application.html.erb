@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daniel Mendoza Arredondo</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+		    
+		    
+	<nav class="navbar navbar-default navbar-dark bg-inverse <%= 'navbar-shrink' if controller_name == 'welcome' && action_name == 'index' %>">
+	  <div class="container">
+	    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+		    &#9776;
+		</button>
+		    <a class="navbar-brand" href="#">Daniel Mendoza Arredondo -- Restaurant</a>
+		    <ul class="nav navbar-nav pull-xs-right">		     
+		      <li class="nav-item">
+		        <%= link_to "Home", root_path%>
+		      </li>
+		      <li class="nav-item">
+		        <%= link_to "menu", menu_path%>
+		      </li>
+		      <li class="nav-item">
+		        <%= link_to "Contactanos", contact_us_path%>
+		      </li>
+		    </ul>
+		    	
+	  </div>
+	  
+	</nav>
+	<div class="container">
+		<%= alert_message flash[:success]%>
+		<%= alert_message flash[:error], class: 'alert alert-danger'%>
+	</div>
+	<%= yield %>
+
+</body>
+</html>

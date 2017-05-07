@@ -1,0 +1,49 @@
+.thumbnail {
+    display: block;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border .2s ease-in-out;
+}
+
+.thumbnail a > img, .thumbnail > img {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.img-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.thumbnail .caption {
+    padding: 9px;
+    color: #333;
+}
+
+.caption h4{
+	font-size: 18px;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.actions {
+    padding: 0 10px 16px 10px;
+    color: #d17581;
+}
+
+.search-bar{
+	margin-bottom: 20px;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}

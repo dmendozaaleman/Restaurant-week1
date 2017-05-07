@@ -1,0 +1,35 @@
+body {
+    font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.navbar-default{
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+
+.navbar-default .navbar-brand {
+    color: #fed136;
+    font-size: 2em;
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.navbar-default .nav li a {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.navbar-default .nav li a:hover, .navbar-default .nav li a:focus {
+    color: #fed136;
+    outline: none;
+    text-decoration: none;
+}

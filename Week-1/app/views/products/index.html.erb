@@ -1,0 +1,45 @@
+<div class="container">
+	<h1 class="center-block">Menu</h1>
+	<div class="row search-bar">
+		<div class="col-sm-4">
+			<ul class="nav nav-pills">
+				<% @sections.each  do |section| %>
+				<li class="nav-item">
+						<%= link_to section, menu_path(section: section), class: @curr_section == section ? 'nav-link active' : 'nav-link' %>
+	  			</li>
+			<% end %>
+			</ul>
+		</div>
+		<div class="col-sm-4">
+			<div class="dropdown">
+			  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			    Ordenar
+			  </button>
+			  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			  	<% @sort_options.each do |option|%>
+			  	<%= link_to option[:name], menu_path(section: @curr_section, sort_by: option[:value], key_word: @key_word), class: @curr_sort == option[:value] ? "dropdown-item active" : "dropdown-item" %>
+			    <% end %>
+			  </div>
+			</div>			
+		</div>
+		<div class="col-sm-4">
+			<%= form_tag(menu_path, :method => "get", class: "form-inline") do %>
+				<div class="input-group">
+					<%= hidden_field_tag :section, @curr_section %>
+					<%= hidden_field_tag :sort_by, @curr_sort %>
+					<%= text_field_tag :key_word, @key_word, class: "form-control", placeholder: "Buscar ..." %>
+			      	<span class="input-group-btn">
+			        	<button class="btn btn-warning" type="submit">Buscar</button>
+			      	</span>
+				</div>
+			<% end %>
+		</div>
+	</div>
+	
+	
+  	<div class="row">
+  		<%= render @products %>
+  	</div>
+	
+	</div>
+</div>
